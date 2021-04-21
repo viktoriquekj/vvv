@@ -1,17 +1,16 @@
-number1 = input("Please input first nr: ")
-number2 = input("Please input second nr: ")
+x = input("Please input first nr: ")
+y = input("Please input second nr: ")
 
+x = float(x)
+y = float(y)
 
-number1 = float(number1)
-number2 = float(number2)
-
-if number1 > number2:
-    max_number = number1
+if x > y:
+    max_number = x
     info = "first nr is greater"
-elif number2 > number1:
-    max_number = number2
+elif y > x:
+    max_number = y
     info = "second nr is greater"
-elif number1 == number2:
+elif x == y:
     max_number = None
     info = "Numbers are even"
 else:
