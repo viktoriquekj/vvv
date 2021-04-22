@@ -1,22 +1,19 @@
-x = input("Please input first nr: ")
-y = input("Please input second nr: ")
+print("Description: This program will find the biggest value from string of numbers")
 
-x = float(x)
-y = float(y)
+nums = input("Please input numbers(comma separated): ")
+nums = nums.split(",")
 
-if x > y:
-    max_number = x
-    info = "first nr is greater"
-elif y > x:
-    max_number = y
-    info = "second nr is greater"
-elif x == y:
-    max_number = None
-    info = "Numbers are even"
-else:
-    max_number = None
-    info = "Unexpected behaviour"
+if len(nums) == 0:
+    print("There is no input numbers")
+    exit(0)
 
-print(info)
-if max_number:
-    print("Greater nr value: " + str(max_number))
+for i in range(len(nums)):
+    nums[i] = float(nums[i])
+
+max_num = nums[0]
+
+for num in nums:
+    if num > max_num:
+        max_num = num
+
+print("Max value: " + str(max_num))
